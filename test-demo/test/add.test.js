@@ -2,11 +2,10 @@
 // const test = require('ava');
 // import { add } from "../dist/add.js";
 // import test from "ava";
-let mod = require("../src/add.js");
-let test = require("ava");
 
-test('foo', t => {
-  if (mod.add(3, 4) === 7) {
-	  t.pass();
-  }
+import {add} from "../src/add.js";
+let assert = require("assert");
+
+it('should return -1 when the value is not present', function () {
+  assert.equal(add(3, 4), 7);
 });
