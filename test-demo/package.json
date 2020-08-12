@@ -4,19 +4,34 @@
   "description": "mocha test demo",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc mocha"
+    "test": "ava",
+    "coverage": "nyc ava"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ava": "^3.11.1",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@ava/babel": "^1.0.1",
+    "@babel/register": "^7.10.5",
     "mocha": "^8.1.1"
   },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "babel": {
+      "testOptions": {
+        "babelrc": true
+      }
+    }
+  },
   "dependencies": {
-    "nyc": "^15.1.0",
-    "webpack": "^4.44.1"
+    "nyc": "^15.1.0"
   }
 }

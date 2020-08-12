@@ -1,17 +1,12 @@
-var add = require('../dist/add.js');
+// var add = require('../dist/add.js');
+// const test = require('ava');
+// import { add } from "../dist/add.js";
+// import test from "ava";
+let mod = require("../src/add.js");
+let test = require("ava");
 
-var assert = require('assert');
-describe('Array', function () {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-  });
-});
-
-
-describe('add', function () {
-  it('should return -1 when the value is not present', function () {
-    assert.equal(add.add(3, 4), 7);
-  });
+test('foo', t => {
+  if (mod.add(3, 4) === 7) {
+	  t.pass();
+  }
 });
