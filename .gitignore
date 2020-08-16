@@ -45,3 +45,12 @@ thumbs.db
 .vscode
 node_modules/
 jscoverage_lib/
+babel/node_modules/*
+console-toolkit/node_modules/*
+elle-app/node_modules/*
+generator-elle/node_modules/*
+html-parser/node_modules/*
+test-demo/node_modules/*
+toy-tool/node_modules/*
+tt-example/node_modules/*
+watcher/node_modules/*
